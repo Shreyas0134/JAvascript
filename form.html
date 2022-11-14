@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+<script>
+    function check()
+    {
+        var n,m,a,c,s,p;
+n=document.getElementById("t1").value;
+m=document.getElementById("t2").value
+a=document.getElementById("t3").value
+c=document.getElementById("t4").value
+s=document.getElementById("t5").value
+p=document.getElementById("t6").value
+if
+(n!=""||m!=""||a!=""||c!=""||s!=""||p!="") 
+{
+if (!n.match(/^[a-z A-Z]+$/))
+{
+alert("Invalid name fields");
+} 
+else
+if(!m.match(/^\d{10}$/))
+{
+alert("Invalid mob no fields");
+}
+else if
+(!p.match(/^\d{6}$/)) 
+{
+alert("Invalid pincode fields");
+}
+else
+{
+alert("Submit succesfully......");
+}
+}
+else
+{
+alert("Invalid fields");
+}
+}
+
+    
+
+</script> 
+<input type="text" id="t1" placeholder="Enter name"><br>
+<input type="number" id="t2" placeholder="Enter phoneno."><br>
+<input type="text" id="t3" placeholder="Enter Address"><br>
+<input type="text" id="t4" placeholder="Enter City"><br>
+<input type="text" id="t5" placeholder="Enter State"><br>
+<input type="number" id="t6" placeholder="Enter pincode"><br>
+<input type="button" value="submit" onclick="check()">   
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <P id="demo"></P>
+        <input type="text" name="n1" id="n1"  placeholder="ENter First number" required><br>
+        <input type="text" name="n2" id="n2" placeholder="Enter second number" required><br>
+        <button id="btn" onclick="division()">Send</button>
+        <script>
+            function division()
+            {
+            let a,b,c;
+            
+            a=parseFloat(document.getElementById("n1").value);
+            b=parseFloat(document.getElementById("n2").value);
+            c=parseFloat(a/b);
+            alert("division="+c)
+            }
+            
+
+</script>
+    </body>
+</html>

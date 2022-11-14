@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+         
+            var a=123;
+            var sum=0;
+            while(a>0)
+            {
+                var r=a%10;
+                sum=sum+r;
+                a=parseInt(a/10);
+            }
+            document.getElementById("demo").innerHTML="sum="+sum;
+
+        </script>
+    </body>
+</html>

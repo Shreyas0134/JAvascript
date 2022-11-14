@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+       
+var r; 
+var n1;
+var ch;
+var n2;
+function dis(val)
+{
+document.getElementById("no").value+=val;
+}
+function clear()
+{
+document.getElementById("no").value="";
+}
+function addition()
+{
+n1=document.getElementById("no").value;
+document.getElementById("no").value="";
+ch=1;
+}
+function substraction()
+{
+n1=document.getElementById("no").value;
+document.getElementById("no").value="";
+ch=2;
+}
+function multiplication()
+{
+r=0;n2=0;
+n1=document.getElementById("no").value;
+document.getElementById("no").value="";
+ch=3;
+}
+function division()
+{
+r=0;
+n1=0;
+n1=document.getElementById("no").value;
+document.getElementById("no").value="";
+ch=4;
+}
+function result()
+{
+var n2=document.getElementById("no").value;
+switch(ch)
+{
+case 1: 
+r=parseInt(n1)+parseInt(n2);
+document.getElementById('no').value=r;
+n1=r;
+break;
+case 2: 
+r=parseInt(n1)-parseInt(n2);
+document.getElementById('no').value=r;
+n1=r;
+break;
+case 3: 
+r=parseInt(n1)*parseInt(n2);
+document.getElementById('no').value=r;
+n1=r;
+break;
+case 4: 
+r=parseInt(n1)/parseInt(n2);
+document.getElementById('no').value=r;
+n1=r;
+break;
+}
+}
+        
+
+    </Script>
+    <form>
+        <table border="0" align="center" style="height: 300px;width:300px">
+        <tr align="center">
+        <td colspan="5""><b>Javascript Calculator</td>
+        </tr>
+        <tr align="center">
+        <td colspan="5"><input type="text" class="i" id="no"></td>
+        </tr>
+        <tr align="center">
+        <td><input type="button" value="(" onclick="dis('(')"/></td>
+        <td><input type="button" value=")" onclick="dis(')')"/></td>
+        <td><input type="button" value="%" onclick="dis('%')"/></td>
+        <td><input type="button" value="AC" onclick="clear()"/></td>
+        </tr>
+        <tr align="center">
+        <td><input type="button" value="7" onclick="dis('7')"/></td>
+        <td><input type="button" value="8" onclick="dis('8')"/></td>
+        <td><input type="button" value="9" onclick="dis('9')"/></td>
+        <td><input type="button" value="/" onclick="division()"/></td>
+        </tr>
+        <tr align="center">
+        <td><input type="button" value="4" onclick="dis('4')"/></td>
+        <td><input type="button" value="5" onclick="dis('5')"/></td>
+        <td><input type="button" value="6" onclick="dis('6')"/></td>
+        <td><input type="button" value="*" onclick="multiplication()"/></td>
+        </tr>
+        <tr align="center">
+        <td><input type="button" value="1" onclick="dis('1')"/></td>
+        <td><input type="button" value="2" onclick="dis('2')"/></td>
+        <td><input type="button" value="3" onclick="dis('3')"/></td>
+        <td><input type="button" value="-" onclick="substraction()"/></td>
+        </tr>
+        <tr align="center">
+        <td><input type="button" value="0" onclick="dis('0')"/></td>
+        <td><input type="button" value="." onclick="dis('.')"/></td>
+        <td><input type="button" value="="onclick="result()"/></td>
+        <td><input type="button" value="+" onclick="addition()"/></td>
+        </tr>
+        </table>
+        </form>
+    
+</body>
+</html>

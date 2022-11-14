@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        function check()
+        {
+            var a,b,c;
+            a=document.getElementById("t1").value;
+            b=document.getElementById("t2").value;
+            c=document.getElementById("t3").value;
+            if(a==""||b==""||c=="")
+            {
+               alert("Please fill the fields");
+            }
+            else{
+
+            
+            if(b!=c)
+            {
+               alert("Password not match");
+            }
+            else
+            {
+                alert("Submit succesfully......");
+            }
+        }
+    }
+    </Script>
+    <input type="text" id="t1" placeholder="Enter username "><br>
+    <input type="password" id="t2" placeholder="Enter password "><br>
+    <input type="password" id="t3" placeholder="Confirm password"><br>
+    <input type="button" value="submit" onclick="check()">
+</body>
+</html>

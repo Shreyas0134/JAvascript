@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkbill()
+        {
+            var name,lname,date,time,from,to;
+            name=document.getElementById("t1").value;
+            lname=document.getElementById("t2").value;
+            from=document.getElementById("t3").value;
+            to=document.getElementById("t4").value;
+            date=document.getElementById("t5").value;
+            time=document.getElementById("t6").value;
+            seat=document.getElementById("t7").value;
+            classes=document.getElementById("type").value;
+            var price=0;
+            if(name!=="" || lname!=="" || from!=="" || to!=="" || date!=="" || time!=="" || seat!=="")
+            {
+                var a=document.getElementById("one")
+                
+                  if (classes == 'Economical') 
+                  {
+                  price = parseInt(15000 * seat);
+                
+                  }
+                  else if (classes =='first class')
+                  {
+                    price = parseInt(30000 * seat);
+                  } 
+                  else (classes == 'Dikki class')
+                  {
+                    price = (seat * 2000);
+                  }
+                
+            }
+            else
+            {
+                alert("Invalid fields");
+            }
+            alert( 
+                "Name: " + name + " " + lname + "\n" +
+                "From: " + from + "\n" +
+                "To: " + to + "\n" +
+                "Date: " + date + "\n" +
+                "Time: " + time + "\n" +
+                "Seat: " + seat + "\n" +
+                "Price: " + price + "\n" +
+                "Thank you for booking with us");
+              
+        }
+            
+            
+                
+    </script>
+
+    <input type="text" id="t1" placeholder="Enter name"><br>
+    <input type="text" id="t2" placeholder="Enter lastname."><br>
+    <input type="text" id="t3" placeholder="Enter from"><br>
+    <input type="text" id="t4" placeholder="Enter to"><br>
+    <input type="date" id="t5" placeholder="Select date"><br>
+    <input type="time" id="t6" placeholder="select time"><br>
+     <select id="type">  
+        <option value="Economy">Economical</option>
+        <option value="Business">first class</option>
+        <option value="First">Dikki class</option></select><br>
+    <input type="number" id="t7" placeholder="Enter seat"><br>
+    <input type="button" value="submit" onclick="checkbill()">
+    
+</body>
+</html>

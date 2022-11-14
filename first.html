@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <p id="demo"></p>
+       
+        <input type="text" name="n1" id="n1"  placeholder="ENter First number" required><br>
+         <input type="text" name="n2" id="n2" placeholder="Enter second number" required><br>
+            <button id="btn" onclick="multiply()">Send</button>
+        <script>
+            function multiply()
+            {
+                let a,b,c;
+                c = a*b;
+            a=parseInt(document.getElementById("n1").value);
+            b=parseInt(document.getElementById("n2").value);
+            c=a*b;
+            alert("multiplication="+c);
+            }
+
+        </script>
+        
+    </body>
+</html>

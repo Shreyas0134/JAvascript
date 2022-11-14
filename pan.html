@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function check()
+        {
+             var a,b,c,d;
+                a=document.getElementById("t1").value;
+                b=document.getElementById("t2").value;
+                c=document.getElementById("t3").value;
+                d=document.getElementById("t4").value;
+                if(a!=""||b!=""||c!=""||d!="")
+                {
+                    if(!a.match(/^[a-z A-Z]+$/))
+                    {
+                        alert("Invalid name fields");
+                    }
+                   
+                    
+                    else if(!d.match(/^([\w]{5})(\d{4})([\w]{1}$)/))
+                    {
+                        alert("Invalid  pan number");
+                    }
+                    else
+                    {
+                        alert("Submit succesfully......");
+                    }
+                }
+                else
+                {
+                    alert("Invalid fields");
+                }
+        }
+    </script>
+    <input type="text" id="t1" placeholder="Enter name of customer"><br>
+    <input type="text" id="t2" placeholder="Enter name of bank "><br>
+    <input type="text" id="t3" placeholder="Account  number"><br>
+    <input type="text" id="t4" placeholder="Enter pan number"><br>
+    <input type="button" value="submit" onclick="check()">
+</body>
+</html>

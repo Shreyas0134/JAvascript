@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fact() 
+        {
+
+            var a = document.getElementById("f1").value;
+            var b = document.getElementById("f2").value;
+            var c = document.getElementById("f3").value;
+            var d = parseInt(document.getElementById("f4").value);
+            var e = parseInt(document.getElementById("f5").value);
+            var f = parseInt(document.getElementById("f6").value);
+            var gs = d + e + f;
+            
+
+
+
+
+            alert("<br>Employee name=" + a);
+            document.write("<br>Department name=" + b);
+            document.write("<br>Designation=" + c);
+            document.write("<br>BS=" + d);
+            document.write("<br>HRA=" + e);
+            document.write("<br>DA=" + f);
+            document.write("<br>GS=" + gs);
+        }
+    </script>
+
+    <input type="text" name="a" id="f1" placeholder="Name of employee" required><br>
+    <input type="text" name="b" id="f2" placeholder="Name of department" required><br>
+    <input type="text" name="c" id="f3" placeholder="Designation" required><br>
+    <input type="number" name="d" id="f4" placeholder="BS" required><br>
+    <input type="number" name="e" id="f5" placeholder="HRA" required><br>
+    <input type="number" name="f" id="f6" placeholder="DA" required><br><br>
+    <input type="button" value="submit" onclick="fact()" id="btn">
+
+    
+
+</body>
+
+</html>

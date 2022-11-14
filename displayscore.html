@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            function check()
+            {
+                  var a,b;
+                  a=document.getElementById("t1").value;
+                  b=document.getElementById("t2").value;
+                  if (a=="" || b=="")
+                  {
+                        alert("Please enter the values");
+                        window.location = "data.html";
+                        return true;
+                       
+                  }
+                  else
+                  {
+
+                  if(a==b)
+                  {
+                    alert("login successful");
+                    return false;
+ }
+                  else
+                  {
+                    alert("login failed");
+                    
+                  }
+                }
+            } 
+    </script>
+    <h1>Dr.DY patil</h1>
+    <input type="text" id="t1" placeholder="Enter username"><br>
+    <input type="password" id="t2" placeholder="Enter password"><br>
+   <input type="button" value="submit" onclick="return check()"></a>
+
+</body>
+</html>
